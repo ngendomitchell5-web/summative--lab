@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>Wordly | Dictionary</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Wordly home"><span class="brand-mark">W</span> wordly</a>
+    <button class="theme-button" id="theme-button" type="button" aria-label="Switch color theme">☾ <span>Theme</span></button>
+  </header>
+
+  <main class="page" id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR POCKET DICTIONARY</p>
+      <h1 id="page-title">Words open <span>worlds.</span></h1>
+      <p class="intro-copy">Find a word, discover its meaning, and keep the ones you love.</p>
+      <form id="search-form" class="search-form">
+        <label class="sr-only" for="word-input">Search for an English word</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="word-input" name="word" type="search" placeholder="Try “serendipity”" autocomplete="off" required>
+        <button type="submit">Search <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="hint">A little curiosity goes a long way.</p>
+    </section>
+
+    <div class="content-grid">
+      <section class="result-panel" aria-label="Dictionary results">
+        <p id="message" class="message" role="status" aria-live="polite">Search for a word to see its meaning.</p>
+        <div id="result"></div>
+      </section>
+      <aside class="saved-panel" aria-labelledby="saved-title">
+        <div class="saved-heading"><span class="saved-icon" aria-hidden="true">♡</span><div><h2 id="saved-title">Saved words</h2><p>Your personal collection</p></div></div>
+        <ul id="saved-list" class="saved-list"></ul>
+        <p id="saved-empty" class="saved-empty">Words you save will show up here.</p>
+      </aside>
+    </div>
+    <footer><span>WORDLY</span><span>One word at a time.</span></footer>
+  </main>
+</body>
+</html>
